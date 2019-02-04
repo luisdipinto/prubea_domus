@@ -84,12 +84,12 @@ BYTE        Disp_Modo = 0;     // Inidcara que y como se muestra, segun lo sigui
 #define     Dec_p   0x01       // Mostrar la variable(s) en Decimal y ceros a la izquierda: .
 #define     Dec_d   0x02       // Mostrar la variable(s) en Decimal y ceros a la izquierda: _
 #define     Dec_m   0x03       // Mostrar la variable(s) en Decimal y ceros a la izquierda: -
-#define     Dec_u   0x04       // Mostrar la variable(s) en Decimal y ceros a la izquierda: ¯
+#define     Dec_u   0x04       // Mostrar la variable(s) en Decimal y ceros a la izquierda: ï¿½
 #define     Hex_o   0x10       // Mostrar la variable(s) en Hexadecimal y ceros a la izquierda: Off
 #define     Hex_p   0x11       // Mostrar la variable(s) en Hexadecimal y ceros a la izquierda: .
 #define     Hex_d   0x12       // Mostrar la variable(s) en Hexadecimal y ceros a la izquierda: _
 #define     Hex_m   0x13       // Mostrar la variable(s) en Hexadecimal y ceros a la izquierda: -
-#define     Hex_u   0x14       // Mostrar la variable(s) en Hexadecimal y ceros a la izquierda: ¯
+#define     Hex_u   0x14       // Mostrar la variable(s) en Hexadecimal y ceros a la izquierda: ï¿½
 
 
 
@@ -200,7 +200,7 @@ void main()
     ModoJuego = 0;
     
 
-#endif  // Inicialización
+#endif  // Inicializaciï¿½n
 
 #if 1
     LATCbits.LATC0 = 1;
@@ -297,12 +297,12 @@ void main()
                 if (FBA == 1)       // Pregunto si se apreto algo en el teclado
                 {
                     FBA = 0;        // indico que atiendo lo presionado
-                    if(Tecla < 10)  // Se presionó un numero
+                    if(Tecla < 10)  // Se presionï¿½ un numero
                     {
                         TXREG = Tecla;
                         while(TRMT == 0);
                     }
-                    if(Tecla == 0x0C)   // Se presionó la tecla C
+                    if(Tecla == 0x0C)   // Se presionï¿½ la tecla C
                     {
                         Disp_Var_1 = 0;
                     }
@@ -423,7 +423,7 @@ switch((Disp_Modo)&0x0F)
     case(1): PORTB=0b00000001; break;   // .
     case(2): PORTB=0b00000010; break;   // _
     case(3): PORTB=0b00100000; break;   // -
-    case(4): PORTB=0b00010000; break;   // ¯
+    case(4): PORTB=0b00010000; break;   // ï¿½
     default: PORTB=0b00000000; break;   // Off
 }
 }
@@ -433,7 +433,7 @@ void Mostrar()
     if(F_1ms == 1)      // pregunto si paso un seg
     {
         Armar();
-        F_1ms = 0;      // indico que ya contabilicé este ms
+        F_1ms = 0;      // indico que ya contabilicï¿½ este ms
         t_mux++;
         if(t_mux == 4)  // cuando pase esta cantidad de ms (6 serian 33 fps)
         {
@@ -525,7 +525,7 @@ void MostrarJ()
 {
     if(F_1ms == 1)      // pregunto si paso un mseg
     {
-        F_1ms = 0;      // indico que ya contabilicé este ms
+        F_1ms = 0;      // indico que ya contabilicï¿½ este ms
         t_mux++;
         if(t_mux == 4)  // cuando pase esta cantidad de ms (6 serian 33 fps)
         {
@@ -719,7 +719,7 @@ void Teclado()
 {
     if(F_10ms == 1)      // pregunto si paso un seg
     {
-        F_10ms = 0;      // indico que ya contabilicé este ms
+        F_10ms = 0;      // indico que ya contabilicï¿½ este ms
         t_tec ++;
         if(t_tec == 4)
         {
