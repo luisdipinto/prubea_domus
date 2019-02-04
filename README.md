@@ -1,2 +1,2 @@
-# prubea_domus
+# prueba_domus
 pruebas de GIT 2019
