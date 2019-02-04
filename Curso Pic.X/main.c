@@ -247,7 +247,7 @@ void main()
                     FBA = 0;
                     if(Tecla == 0x0A)
                     {
-                        ModoJuego = 1;
+                        ModoJuego = 5;
                         Led_RB3 = 1;
                         Led_RB2 = 1;
                         Led_RB1 = 1;
